@@ -3,7 +3,7 @@
 
 int main() {
     while (1) {
-        printf("hello%%world\n");
+        printf("hello world\n");
         fflush(stdout); // Ensure the output is printed immediately
         sleep(1); // Wait for 1 second
     }

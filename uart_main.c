@@ -7,7 +7,11 @@
 //GPIO library
 #include <wiringPi.h>
 
-int main(int argc, char **argv) {
+void setGpioPinHigh(int pin);
+
+
+int main() {
+    setGpioPinHigh(5);
     int fd;
     FILE *file;
 
