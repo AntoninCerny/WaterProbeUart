@@ -12,7 +12,7 @@ void setGpioPinHigh(int pin);
 
 
 int main() {
-    setGpioPinHigh(5);
+    setGpioPinHigh(24);
     int fd;
     
 
