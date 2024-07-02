@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
+//use this library with comented code for UART without wiringPi
 //#include <termios.h>
 //GPIO library
 #include <wiringPi.h>
@@ -12,11 +13,11 @@ void setGpioPinHigh(int pin);
 
 
 int main() {
-    setGpioPinHigh(24);
+    setGpioPinHigh(5);
     int fd;
     
 
-    // Open the Port. We want read/write, no "controlling tty" status, and open it no matter what state DCD is in
+    
     //fd = open("/dev/serial0", O_RDWR | O_NOCTTY | O_NDELAY);
     fd = serialOpen("/dev/serial0", 9600);
     if (fd == -1) {
