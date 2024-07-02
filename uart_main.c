@@ -45,7 +45,7 @@ int main() {
         if(bits == 0){
 
         }
-        else if(bits == -1){
+        if(bits == -1){
             printf("error reading serial")
             serialFlush(fd);
         }
