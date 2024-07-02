@@ -18,7 +18,7 @@ int main() {
 
     // Open the Port. We want read/write, no "controlling tty" status, and open it no matter what state DCD is in
     //fd = open("/dev/serial0", O_RDWR | O_NOCTTY | O_NDELAY);
-    fd = serialOpen("/dev/ttyAMA0", 9600)
+    fd = serialOpen("/dev/ttyAMA0", 9600);
     if (fd == -1) {
         perror("open_port: Unable to open /dev/ttyAMA0 - ");
         return -1;
@@ -46,7 +46,7 @@ int main() {
 
         }
         if(bits == -1){
-            printf("error reading serial")
+            printf("error reading serial");
             serialFlush(fd);
         }
         else{
